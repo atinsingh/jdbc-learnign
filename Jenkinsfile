@@ -33,6 +33,6 @@ node {
    }
 
    stage('Notify Slack'){
-       slackSend channel: 'devops-june-2021', message: 'Build "${BUILD_ID}" successful'
+       slackSend channel: 'devops-june-2021', message: 'Build "$BUILD_ID" successful'
    }
 }
