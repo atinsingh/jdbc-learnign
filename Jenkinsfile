@@ -1,4 +1,8 @@
 node {
+
+    stage('Checkout Code') {
+      checkout scm
+   }
    
    stage('Compile') {
        withMaven(jdk: 'jdk11', maven: 'maven3') {
