@@ -32,5 +32,7 @@ node {
        emailext attachLog: true, body: '', subject: 'Build Sucessful', to: 'atin.singh@pragra.co'
    }
 
-
+   stage('Notify Slack'){
+       slackSend channel: 'devops-june-2021', message: 'Build "${BUILD_ID}" successful'
+   }
 }
